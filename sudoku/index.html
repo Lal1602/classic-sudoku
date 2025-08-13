@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sudoku — Simple</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>Sudoku</h1>
+
+  <div class="status-bar">
+    <div id="timer">Time: 0s</div>
+    <div id="highscore">Highscore: -</div>
+    <div id="lives">Lives: -</div>
+  </div>
+
+  <div class="difficulty">
+    <label><input type="radio" name="difficulty" value="easy" checked> Mudah</label>
+    <label><input type="radio" name="difficulty" value="medium"> Sedang</label>
+    <label><input type="radio" name="difficulty" value="hard"> Sulit</label>
+  </div>
+
+  <div id="board-wrapper">
+    <div id="sudoku-board" aria-label="Papan Sudoku 9x9"></div>
+  </div>
+
+  <!-- Keypad angka untuk klik -->
+  <div id="number-pad" aria-label="Keypad Angka">
+    <button class="pad-key" data-key="1">1</button>
+    <button class="pad-key" data-key="2">2</button>
+    <button class="pad-key" data-key="3">3</button>
+    <button class="pad-key" data-key="4">4</button>
+    <button class="pad-key" data-key="5">5</button>
+    <button class="pad-key" data-key="6">6</button>
+    <button class="pad-key" data-key="7">7</button>
+    <button class="pad-key" data-key="8">8</button>
+    <button class="pad-key" data-key="9">9</button>
+    <button class="pad-key pad-erase" data-key="erase" title="Hapus">⌫</button>
+  </div>
+
+  <div class="buttons">
+    <button id="startBtn">Start Game</button>
+    <button id="newGameBtn" style="display:none;">New Game</button>
+  </div>
+
+  <!-- Popup Menang -->
+  <div id="winPopup" class="popup" role="dialog" aria-modal="true" aria-labelledby="winTitle" aria-describedby="winDesc">
+    <div class="popup-content">
+      <h2 id="winTitle">🎉 Permainan Selesai!</h2>
+      <p id="winDesc">
+        <span id="finalTime"></span><br/>
+        <span id="bestTime"></span>
+      </p>
+      <div class="popup-actions">
+        <button id="closePopup">Tutup</button>
+        <button id="popupNewGame">Main Lagi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Game Over -->
+  <div id="gameOverPopup" class="popup" role="dialog" aria-modal="true">
+    <div class="popup-content">
+      <h2>💥 Game Over</h2>
+      <p id="goTime"></p>
+      <div class="popup-actions">
+        <button id="goClose">Tutup</button>
+        <button id="goNew">Coba Lagi</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
