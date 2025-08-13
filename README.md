@@ -18,4 +18,4 @@ Bisa dimainkan langsung di browser tanpa instalasi tambahan.
 ## 🚀 Cara Menjalankan
 1. Clone repository ini:
    ```bash
-   git clone https://github.com/username/repo-name.git
+   git clone https://github.com/lal1602/classic-sudoku.git
